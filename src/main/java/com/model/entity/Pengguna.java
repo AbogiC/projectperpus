@@ -4,7 +4,7 @@ import javax.persistence.*;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="t-pengguna")
+@Table(name="t_pengguna")
 
 public class Pengguna {
     @Id
@@ -19,6 +19,26 @@ public class Pengguna {
 
     @Column(name="alamat")
     private String alamat;
+    @Column(name="username")
+    private String username;
+    @Column(name = "password")
+    private String password;
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
     public String getKodePengguna() {
         return kodePengguna;
